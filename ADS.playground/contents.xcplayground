@@ -4,5 +4,6 @@
         <page name='Array'/>
         <page name='Search_LinearSearchList'/>
         <page name='Search_BinarySearchList'/>
+        <page name='Prob_TwoBallsCrystall'/>
     </pages>
 </playground>
