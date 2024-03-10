@@ -17,6 +17,8 @@ Covers study topics on DSA, using the following languages
     1. Search
         1. LinearSearch
         2. BinarySearch
+    2. Sort
+        1. BubbleSort
 4. Problems
     1. Search
         1. Two crystal balls

@@ -5,5 +5,6 @@
         <page name='Search_LinearSearchList'/>
         <page name='Search_BinarySearchList'/>
         <page name='Prob_Search_TwoBallsCrystall'/>
+        <page name='Sort_BubbleSort'/>
     </pages>
 </playground>
