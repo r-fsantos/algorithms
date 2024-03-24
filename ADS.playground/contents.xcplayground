@@ -6,5 +6,7 @@
         <page name='Search_BinarySearchList'/>
         <page name='Prob_Search_TwoBallsCrystall'/>
         <page name='Sort_BubbleSort'/>
+        <page name='z_SandBox'/>
+        <page name='z_Tests'/>
     </pages>
 </playground>
