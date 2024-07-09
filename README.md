@@ -1,24 +1,17 @@
-# data structures && algorithms (DSA)
+# Searching Algorithms
 
-Covers study topics on DSA, using the following languages
+## Linear Search
 
-1. TypeScript
-2. Swift
-3. C
+Over an Ordered Array O(1): Iterates over each element of the array and returns the index of some value (v), if found.
 
-## Covered topics (so far):
+- Big O
+  - O(n). f(n) is directly proportional to n size
 
-### TODO: Adds links to each topic, subtopic and kata-machine fork from ThePrimeagen teacher repo with my own implementations
+## Binary Search
 
-1. Big O
-2. Data Structures
-    1. Arrays
-3. Algorithms
-    1. Search
-        1. LinearSearch
-        2. BinarySearch
-    2. Sort
-        1. BubbleSort
-4. Problems
-    1. Search
-        1. Two crystal balls
+Iterates over an Ordered Array O(1). Reduces the array by half at each iteration based on the position of middle element, when compared
+to the needle to de found. Returns true if found and false if not.
+
+- Big O
+  - O(log2 n). 
+
