@@ -5,6 +5,9 @@
 a.out
 *.dSYM
 
+# Python
+venv/
+
 # Xcode
 ## User settings
 xcuserdata/
