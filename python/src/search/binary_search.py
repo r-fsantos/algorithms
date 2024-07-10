@@ -28,24 +28,3 @@ def binary_search(haystask: list[int], needle: int) -> int | None:
             high = mid - 1
 
     return None
-
-
-if __name__ == "__main__":
-    assert (
-        binary_search(haystask=list(range(0, 11, 1)), needle=8) == 8
-        ), "Test 1: 8"
-    assert (
-        binary_search(haystask=list(range(0, 11, 1)), needle=100) == None  # noqa
-        ), "Test: 2: None"
-    assert (
-        binary_search(haystask=list(range(-10, -4, 1)), needle=-9) == 1
-        ), "Test 3: 1"
-    assert (
-        binary_search(haystask=list(range(1, 9, 1)), needle=8) == 7
-        ), "Test 4: 7"
-    assert (
-        binary_search(haystask=list(range(1, 9, 1)), needle=1) == 0
-        ), "Test 5: 0"
-    assert (
-        binary_search(haystask=list(range(0, 11, 1)), needle=0) == 0
-        ), "Test 6: 0"
