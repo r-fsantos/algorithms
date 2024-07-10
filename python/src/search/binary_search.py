@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+
 def binary_search(haystask: list[int], needle: int) -> int | None:
     """Finds the index fot thre first occurrence of a needle on a haystack.
 
