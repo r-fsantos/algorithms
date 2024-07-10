@@ -7,6 +7,7 @@ a.out
 
 # Python
 venv/
+__pycache__
 
 # Xcode
 ## User settings
