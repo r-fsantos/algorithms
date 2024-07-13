@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "c-lang"
+version = "0.1.0"
+description = ""
+authors = ["renato <felicio95.jr@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+norminette = "^3.3.55"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
