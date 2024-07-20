@@ -7,14 +7,15 @@ func binarySearch(haystack: [Int], needle: Int) -> Bool {
     var hi = haystack.count
 
     repeat {
-        var m = Int( floor( Double( (lo + (hi - lo) / 2) ) ) )
+        let m = Int( floor( Double( (lo + (hi - lo) / 2) ) ) )
+        let v = haystack[m]
 
-        if haystack[m] == needle {
+        if needle == v {
             return true;
-        } else if (haystack[m] > needle) {
-            hi = m
-        } else {
+        } else if (needle > v) {
             lo = m + 1
+        } else {
+            hi = m
         }
 
     } while (lo < hi)

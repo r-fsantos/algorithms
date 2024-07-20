@@ -6,7 +6,7 @@
 /*   By: rfelicio <rfelicio@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/13 09:44:42 by rfelicio          #+#    #+#             */
-/*   Updated: 2024/07/13 11:50:12 by rfelicio         ###   ########.fr       */
+/*   Updated: 2024/07/18 10:01:10 by rfelicio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,33 @@ int	main(void)
 	seed_array(array, ARRAY_LENGTH);
 	ret = binary_search(array, 0, ARRAY_LENGTH - 1, 0);
 	printf(YELLOW "\nTesting: Binary Search Algorithm\n\n" YELLOW);
-	printf(BLUE "Test 1: " RESET);
+	printf("");
+	printf(BLUE "Test it should return  0: " RESET);
 	if (ret == 0)
+		printf(GREEN "OK \n" RESET);
+	else
+		printf(RED "NOK \n" RESET);
+	printf(BLUE "Test it should return  8: " RESET);
+	ret = binary_search(array, 0, 10, 8);
+	if (ret == 8)
+		printf(GREEN "OK \n" RESET);
+	else
+		printf(RED "NOK \n" RESET);
+	printf(BLUE "Test it should return  0: " RESET);
+	ret = binary_search(array, 0, 1, 0);
+	if (ret == 0)
+		printf(GREEN "OK \n" RESET);
+	else
+		printf(RED "NOK \n" RESET);
+	printf(BLUE "Test it should return -1: " RESET);
+	ret = binary_search(array, 0, ARRAY_LENGTH - 1, 42);
+	if (ret == -1)
+		printf(GREEN "OK \n" RESET);
+	else
+		printf(RED "NOK \n" RESET);
+	printf(BLUE "Test it should return -1: " RESET);
+	ret = binary_search(array, 0, 0, 42);
+	if (ret == -1)
 		printf(GREEN "OK \n" RESET);
 	else
 		printf(RED "NOK \n" RESET);
@@ -68,20 +93,33 @@ static void	seed_array(int *arr, int lenght)
     Returns:
         The first occurrence of the needle in the harstack
         or -1 if not found.
+
+    Alternative implementation:
+
+    while (high >= low)
+    {
+        mid = (low + high) / 2;
+        if (needle == haystack[mid])
+            return (mid);
+        else if (needle > haystack[mid])
+            low = mid + 1;
+        else
+            high = mid - 1;
+    }
 */
 int	binary_search(int *haystack, int low, int high, int needle)
 {
 	int	mid;
 
-	while (high >= low)
+	do
 	{
-		mid = (low + high) / 2;
+		mid = low + (high - low) / 2;
 		if (needle == haystack[mid])
 			return (mid);
 		else if (needle > haystack[mid])
 			low = mid + 1;
 		else
-			high = mid - 1;
-	}
+			high = mid;
+	} while (low < high);
 	return (-1);
 }
