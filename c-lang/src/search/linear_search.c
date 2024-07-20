@@ -6,7 +6,7 @@
 /*   By: rfelicio <rfelicio@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/17 19:57:39 by rfelicio          #+#    #+#             */
-/*   Updated: 2024/07/17 20:02:44 by rfelicio         ###   ########.fr       */
+/*   Updated: 2024/07/17 22:43:09 by rfelicio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,11 +72,11 @@ static void	seed_array(int *arr, int lenght)
 */
 int	linear_search(int *haystack, int low, int high, int needle)
 {
-    while (high >= low)
-    {
-        if (needle == haystack[low])
-            return low;
-        low++;
-    }
+	while (high >= low)
+	{
+		if (needle == haystack[low])
+			return (low);
+		low++;
+	}
 	return (-1);
 }
