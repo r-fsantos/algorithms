@@ -18,14 +18,14 @@ class TestBinarySearch(unittest.TestCase):
     def test_it_should_find_occurrence_single_element_input(self):
         self.assertEqual(bs([1], 1), 0)
 
-    def test_it_should_return_none_for_single_element_input(self):
-        self.assertIsNone(bs([1], 0))
+    def test_it_should_return_sentinel_value_for_single_element_input(self):
+        self.assertEqual(bs([1], 0), -1)
 
-    def test_it_should_return_none_for_empty_array(self):
-        self.assertIsNone(bs([], 42))
+    def test_it_should_return_sentinel_value_for_empty_array(self):
+        self.assertEqual(bs([], 42), -1)
 
-    def test_it_should_return_none_for_not_found_occurrences(self):
-        self.assertIsNone(bs(list(range(0, 11, 1)), 100))
+    def test_it_should_return_sentinel_value_for_not_found_occurrences(self):
+        self.assertEqual(bs(list(range(0, 11, 1)), 100), -1)
 
 
 if __name__ == "__main__":

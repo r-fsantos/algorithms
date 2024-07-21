@@ -30,7 +30,7 @@ int	main(void)
 
 	array = (int *) malloc(ARRAY_LENGTH * sizeof(int));
 	seed_array(array, ARRAY_LENGTH);
-	ret = binary_search(array, 0, ARRAY_LENGTH - 1, 0);
+	ret = binary_search(array, 0, ARRAY_LENGTH, 0);
 	printf(YELLOW "\nTesting: Binary Search Algorithm\n\n" YELLOW);
 	printf("");
 	printf(BLUE "Test it should return  0: " RESET);
@@ -51,7 +51,7 @@ int	main(void)
 	else
 		printf(RED "NOK \n" RESET);
 	printf(BLUE "Test it should return -1: " RESET);
-	ret = binary_search(array, 0, ARRAY_LENGTH - 1, 42);
+	ret = binary_search(array, 0, ARRAY_LENGTH, 42);
 	if (ret == -1)
 		printf(GREEN "OK \n" RESET);
 	else
