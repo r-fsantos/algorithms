@@ -6,7 +6,7 @@
 /*   By: rfelicio <rfelicio@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/13 09:44:42 by rfelicio          #+#    #+#             */
-/*   Updated: 2024/07/18 10:01:10 by rfelicio         ###   ########.fr       */
+/*   Updated: 2024/07/21 10:16:20 by rfelicio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	main(void)
 
 	array = (int *) malloc(ARRAY_LENGTH * sizeof(int));
 	seed_array(array, ARRAY_LENGTH);
-	ret = binary_search(array, 0, ARRAY_LENGTH - 1, 0);
+	ret = binary_search(array, 0, ARRAY_LENGTH, 0);
 	printf(YELLOW "\nTesting: Binary Search Algorithm\n\n" YELLOW);
 	printf("");
 	printf(BLUE "Test it should return  0: " RESET);
@@ -51,7 +51,7 @@ int	main(void)
 	else
 		printf(RED "NOK \n" RESET);
 	printf(BLUE "Test it should return -1: " RESET);
-	ret = binary_search(array, 0, ARRAY_LENGTH - 1, 42);
+	ret = binary_search(array, 0, ARRAY_LENGTH, 42);
 	if (ret == -1)
 		printf(GREEN "OK \n" RESET);
 	else
@@ -93,19 +93,6 @@ static void	seed_array(int *arr, int lenght)
     Returns:
         The first occurrence of the needle in the harstack
         or -1 if not found.
-
-    Alternative implementation:
-
-    while (high >= low)
-    {
-        mid = (low + high) / 2;
-        if (needle == haystack[mid])
-            return (mid);
-        else if (needle > haystack[mid])
-            low = mid + 1;
-        else
-            high = mid - 1;
-    }
 */
 int	binary_search(int *haystack, int low, int high, int needle)
 {
