@@ -15,16 +15,17 @@ def binary_search(haystask: list[int], needle: int) -> int | None:
         or None if not found.
     """
     low = 0
-    high = len(haystask) - 1
+    high = len(haystask)
 
-    while high >= low:
-        mid = (high + low) // 2
+    while low < high:
+        mid = int(low + (high - low) / 2)
+        guess = haystask[mid]
 
-        if needle == haystask[mid]:
+        if needle == guess:
             return mid
-        elif needle > haystask[mid]:
+        elif needle > guess:
             low = mid + 1
         else:
-            high = mid - 1
+            high = mid
 
     return None
