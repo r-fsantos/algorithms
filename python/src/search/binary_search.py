@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 
-def binary_search(haystask: list[int], needle: int) -> int | None:
+def binary_search(haystask: list[int], needle: int) -> int:
     """Finds the index fot thre first occurrence of a needle on a haystack.
 
     Implements the Binary Search Algorithm. BigO: O(log n)
@@ -12,7 +12,7 @@ def binary_search(haystask: list[int], needle: int) -> int | None:
 
     Returns:
         The first occurrence of the needle in the harstack
-        or None if not found.
+        or -1 if not found.
     """
     low = 0
     high = len(haystask)
@@ -28,4 +28,4 @@ def binary_search(haystask: list[int], needle: int) -> int | None:
         else:
             high = mid
 
-    return None
+    return -1
