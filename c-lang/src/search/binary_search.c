@@ -6,7 +6,7 @@
 /*   By: rfelicio <rfelicio@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/13 09:44:42 by rfelicio          #+#    #+#             */
-/*   Updated: 2024/07/21 10:16:20 by rfelicio         ###   ########.fr       */
+/*   Updated: 2024/07/18 10:01:10 by rfelicio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,6 +93,19 @@ static void	seed_array(int *arr, int lenght)
     Returns:
         The first occurrence of the needle in the harstack
         or -1 if not found.
+
+    Alternative implementation:
+
+    while (high >= low)
+    {
+        mid = (low + high) / 2;
+        if (needle == haystack[mid])
+            return (mid);
+        else if (needle > haystack[mid])
+            low = mid + 1;
+        else
+            high = mid - 1;
+    }
 */
 int	binary_search(int *haystack, int low, int high, int needle)
 {
